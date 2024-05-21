@@ -44,5 +44,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     darkModeToggle.addEventListener('change', () => {
         document.body.classList.toggle('dark-mode');
+        localStorage.setItem('dark-mode', darkModeToggle.checked);
     });
+
+    // Initialize dark mode based on localStorage value
+    if (localStorage.getItem('dark-mode') === 'true') {
+        darkModeToggle.checked = true;
+        document.body.classList.add('dark-mode');
+    } else {
+        darkModeToggle.checked = false;
+        document.body.classList.remove('dark-mode');
+    }
 });
