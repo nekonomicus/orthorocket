@@ -130,7 +130,7 @@ main {
 }
 
 #chat-input {
-    width: calc(100% - 22px);
+    width: calc(100% - 22px); /* Consider adjusting this if possible */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
@@ -208,6 +208,6 @@ footer {
     }
 
     main {
-        margin: 100px auto 20px auto;
+        margin: 100px auto 20px;
     }
 }
