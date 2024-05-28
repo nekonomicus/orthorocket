@@ -1,123 +1,39 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-header {
-    background-color: #ff5a00;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-nav {
-    background-color: #ff5a00;
-    text-align: center;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#chatgpt-wrapper {
-    text-align: center;
-}
-
-#chat-window {
-    border: 1px solid #ccc;
-    padding: 10px;
-    height: 200px;
-    overflow-y: scroll;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-}
-
-#chat-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box; /* Ensures padding and border are included in the width */
-}
-
-#chat-submit {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff5a00;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-footer {
-    background-color: #ff5a00;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-.dark-mode nav {
-    background-color: #1e1e1e;
-}
-
-.dark-mode main {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-}
-
-.dark-mode #chat-window {
-    background-color: #2a2a2a;
-}
-
-.dark-mode #chat-input {
-    background-color: #2a2a2a;
-    color: #e0e0e0;
-    border: 1px solid #444;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrthoRockets</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>OrthoRockets</h1>
+        <label>
+            <input type="checkbox" id="dark-mode-toggle"> Dark Mode
+        </label>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="diagnoses.html">Diagnoses</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="ask">
+            <h2>Ask AI</h2>
+            <div id="chatgpt-wrapper">
+                <p>Ask anything about OrthoRockets' knowledge, and get an answer based on the website content.</p>
+                <div id="chat-window"></div>
+                <input type="text" id="chat-input" placeholder="Type your question here...">
+                <button id="chat-submit">Submit</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 OrthoRockets. All rights reserved.</p>
+    </footer>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
