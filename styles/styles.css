@@ -62,7 +62,7 @@ main {
 }
 
 #chat-input {
-    width: 100%;
+    width: calc(100% - 22px); /* Adjust the width to fit within the container */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
