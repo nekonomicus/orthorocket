@@ -9,15 +9,10 @@ body {
 }
 
 header {
-    width: 100%;
     background-color: #ff5a00; /* Hermès Orange */
     color: white;
     padding: 10px 20px;
     text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,55 +21,16 @@ header {
 .switch-container {
     display: flex;
     align-items: center;
-    cursor: pointer;
 }
 
 .switch {
-    display: none;
-}
-
-.switch + .slider {
-    position: relative;
-    width: 34px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 10px;
-    transition: background-color 0.2s;
-    cursor: pointer;
-}
-
-.switch + .slider:before {
-    content: '';
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: white;
-    top: 3px;
-    left: 3px;
-    transition: transform 0.2s;
-}
-
-.switch:checked + .slider {
-    background-color: #ff5a00;
-}
-
-.switch:checked + .slider:before {
-    transform: translateX(14px);
-}
-
-.switch-label {
-    margin-left: 8px;
-    font-size: 14px;
-    color: white;
+    margin-right: 10px;
 }
 
 nav {
-    width: 100%;
-    background-color: #ff5a00; /* Hermès Orange */
+    background-color: #ff5a00;
     padding: 10px 0;
     text-align: center;
-    margin-top: 50px;
 }
 
 nav ul {
@@ -93,28 +49,19 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
-    padding: 5px;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffcc99;
 }
 
 main {
-    flex: 1;
     padding: 20px;
-    background-color: white;
+    max-width: 800px;
     margin: 80px auto 20px auto;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 90%;
     transition: background-color 0.3s, color 0.3s;
 }
 
 #chatgpt-wrapper {
-    margin-top: 20px;
     text-align: center;
 }
 
@@ -124,13 +71,11 @@ main {
     height: 400px;
     overflow-y: scroll;
     margin-bottom: 10px;
-    text-align: left;
-    border-radius: 8px;
     background-color: #f9f9f9;
 }
 
 #chat-input {
-    width: calc(100% - 22px); /* Consider adjusting this if possible */
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
@@ -145,23 +90,13 @@ main {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#chat-submit:hover {
-    background-color: #cc4a00;
 }
 
 footer {
-    width: 100%;
     background-color: #ff5a00;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
 }
 
 .dark-mode {
@@ -188,15 +123,6 @@ footer {
     border: 1px solid #444;
 }
 
-.dark-mode #chat-submit {
-    background-color: #ff5a00;
-    color: white;
-}
-
-.dark-mode #chat-submit:hover {
-    background-color: #cc4a00;
-}
-
 /* Mobile styles */
 @media (max-width: 768px) {
     nav ul {
@@ -205,9 +131,5 @@ footer {
 
     nav ul li {
         margin: 10px 0;
-    }
-
-    main {
-        margin: 100px auto 20px;
     }
 }
