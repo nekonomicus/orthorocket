@@ -1,1 +1,40 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrthoRockets</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>OrthoRockets</h1>
+        <label class="switch-container">
+            <input type="checkbox" id="dark-mode-toggle">
+            Dark Mode
+        </label>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="diagnoses.html">Diagnoses</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="ask">
+            <h2>Ask AI</h2>
+            <div id="chatgpt-wrapper">
+                <p>Ask anything about OrthoRockets' knowledge, and get an answer based on the website content.</p>
+                <div id="chat-window"></div>
+                <input type="text" id="chat-input" placeholder="Type your question here...">
+                <button id="chat-submit">Submit</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 OrthoRockets. All rights reserved.</p>
+    </footer>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
