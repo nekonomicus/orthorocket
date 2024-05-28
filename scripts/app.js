@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
 
-    // Load the initial theme from localStorage
     if (localStorage.getItem('dark-mode') === 'enabled') {
         body.classList.add('dark-mode');
         toggle.checked = true;
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         toggle.checked = false;
     }
 
-    // Toggle dark mode
     toggle.addEventListener('change', function() {
         if (toggle.checked) {
             body.classList.add('dark-mode');
@@ -20,5 +18,34 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.remove('dark-mode');
             localStorage.setItem('dark-mode', 'disabled');
         }
+    });
+
+    const chatSubmitButton = document.getElementById('chat-submit');
+    chatSubmitButton.addEventListener('click', async function() {
+        const chatInput = document.getElementById('chat-input').value;
+        const chatWindow = document.getElementById('chat-window');
+
+        if (chatInput.trim() === '') {
+            return;
+        }
+
+        chatWindow.innerHTML += `<p><strong>You:</strong> ${chatInput}</p>`;
+
+        try {
+            const response = await fetch('http://localhost:3000/ask-ai', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ question: chatInput })
+            });
+            const data = await response.json();
+            chatWindow.innerHTML += `<p><strong>AI:</strong> ${data.answer}</p>`;
+        } catch (error) {
+            console.error('Error:', error);
+            chatWindow.innerHTML += `<p><strong>AI:</strong> Sorry, there was an error processing your request.</p>`;
+        }
+
+        document.getElementById('chat-input').value = '';
     });
 });
