@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         chatWindow.innerHTML += `<p><strong>You:</strong> ${chatInput}</p>`;
 
         try {
-            const response = await fetch('https://orthorocketsbackend.glitch.me', {
+            const response = await fetch('https://orthorocketsbackend.glitch.me/ask-ai', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
