@@ -10,7 +10,4 @@ The acromioclavicular (AC) joint is a joint at the top of the shoulder where the
 - MRI (in some cases)
 
 ### Treatment
-- Rest, ice, compression, and elevation (RICE)
-- Pain medications
-- Physiotherapy
-- Surgery (in severe cases)
+- Run home and never go out again
