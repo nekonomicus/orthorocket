@@ -57,6 +57,20 @@ main {
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
 #chatgpt-wrapper {
     text-align: center;
 }
